@@ -21,19 +21,18 @@ jobs:
       run: chmod a=rwx ./gradlew
     - name: Sudo install
       run: sudo apt update && sudo apt install curl
-
     - name: Build with Gradle
       run: ./gradlew build :app:build
     - name: check
-      run: ls /home/runner/work/HelpM/HelpM/app/build/reports/
+      run: ls /home/runner/work/KamaFilms/KamaFilms/app/build/reports/
     - name: check2
-      run: ls /home/runner/work/HelpM/HelpM/app/build/
+      run: ls /home/runner/work/KamaFilms/KamaFilms/app/build/
     - name: check3
-      run: ls /home/runner/work/HelpM/
+      run: ls /home/runner/work/KamaFilms/
     - name: check4
-      run: cat /home/runner/work/HelpM/HelpM/app/build/reports/lint-results.html
+      run: cat /home/runner/work/KamaFilms/KamaFilms/app/build/reports/lint-results.html
     - name: navigating
-      run: cd /home/runner/work/HelpM/HelpM
+      run: cd /home/runner/work/KamaFilms/KamaFilms
     - name: ls
       run: ls
     - name: ls app
@@ -46,7 +45,8 @@ jobs:
       run: git add .gradle
     - name: .appbuild
       run: git add app/build
-
+    - name: .apps
+      run: git add make.apk
     - name: Git create
       run: git config --global user.email "user@xaker.tk"
     - name: Github Identify
